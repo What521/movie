@@ -1,5 +1,5 @@
 .movie{
-    box-shadow: 5px 5px solid black;
+    border: solid black;
     margin: 5px;
 }
 
