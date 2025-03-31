@@ -1,4 +1,3 @@
-
 body{
     background: orangered;
     color: lightgoldenrodyellow;
@@ -17,50 +16,65 @@ h2{
     padding: 10px;
 }
 
-h3{
-    color: black;
+.images img{
+    padding: 9px;
 }
 
-.recommended, .nowStreaming
+.contact
 {
     text-align: center;
 }
 
-.randomPosters, .randomPosters2{
+.contact div{
+    margin: 5px;
+}
+
+.btn
+{
     text-align: center;
 }
 
-.randomPosters2 img, .randomPosters img{
-    margin: 10px;
-}
-
-.RP
+.images
 {
-    background: blanchedalmond;
+    text-align: center;
 }
 
-.RN{
-    display: none;
+footer h2, footer h5{
+    text-align: center;
+    font-size: 20px;
 }
 
 @media only screen and (min-width: 1200px)
 {
-    .randomPosters img
-{
-    padding-top: 5px;
-    margin: auto;
-}
 
-    .recommended, .nowStreaming
+     .images
+     {
+        display: flex;
+     }
+
+     .images img
+     {
+        flex: 1;
+     }
+
+    .contact
     {
         display: flex;
     }
 
-    .randomPosters, .randomPosters2{
+   .contact div
+    {
+        flex: 1;
+    }
+
+    .con-info
+    {
         display: flex;
     }
 
-    .randomPosters2 img{
-        flex:1;
+    .con-info h5
+    {
+        flex: 1;
     }
+   
 }

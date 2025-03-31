@@ -1,5 +1,22 @@
-header{
-    background: pink;
-    text-align: center;
-    padding: 10px;
+body{
+    background: orangered;
+    color: lightgoldenrodyellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+header{
+    background: black ;
+}
+
+@media only screen and (min-width: 900px) {
+
+header{
+    display: flex;
+}
+
+header .main-nav{
+    margin-left: 480px;
+}
+
+}
+
