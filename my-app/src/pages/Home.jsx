@@ -1,7 +1,6 @@
 import './css/Home.css';
-import './js/Home.js';
 import Movie from '../components/movie.jsx';
-import Popup from '../components/popup.jsx';
+
 
 function App() {
   return (
@@ -13,16 +12,18 @@ function App() {
 
 <ul className="recommended">
 
-  <section className="RND">
+ 
 <Movie
+        linkName = "/Red Notice"
         name = "Red Notice"
         image ={`${process.env.PUBLIC_URL}/images/RN.jfif`}
         cast = " Dwayne Johnson, Ryan Reynolds"
         year = "Year: 2021"
         rating = "Rating: 6.3/10 IMDb"/>
- </section>
+ 
 
           <Movie
+           linkName = "/Puss in the boots"
            name = "Puss in the boots"
            image={`${process.env.PUBLIC_URL}/images/PB.jfif`}
            cast= "Cast: Antonio Banderas, Salma Hayek"
@@ -34,13 +35,15 @@ function App() {
     <h3>Now streaming:</h3>
     <ul className="nowStreaming">
     <Movie
+     linkName = "/A Knight's War"
           name = "A Knight's War"
-        image ={`${process.env.PUBLIC_URL}/images/KW.jfif`}
+        image ={`${process.env.PUBLIC_URL}/images/KW2.jfif`}
         cast = "Cast: Jeremy Ninaber, Kristen Kasteri"
         year = "Year: 2025"
         rating = "Rating: 7.1/10 IMDb"/>
 
           <Movie
+           linkName = "/Dark Nuns"
            name = "Dark Nuns"
            image={`${process.env.PUBLIC_URL}/images/DN.jfif`}
            cast= "Cast: Moon Woo-jin, Lee Jin-wook"
@@ -63,13 +66,6 @@ function App() {
 </div>
   
   </div>
-
-<section className="RN">
-  <Popup
-  title="Red Notice"/>
-</section>  
-
-    
     </>
 
   );

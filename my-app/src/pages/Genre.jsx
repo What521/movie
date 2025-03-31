@@ -10,6 +10,7 @@ function Genre () {
         <h1>Action:</h1>
         <div className="actionImg">
           <Movie
+          linkName = "/John Wick"
           name = "John Wick"
         image ="images/JWimg.jfif"
         cast = "Cast: Keanu Reeves, Adrianne Palicki"
@@ -17,6 +18,7 @@ function Genre () {
         rating = "Rating: 7.4/10 IMDb"/>
 
           <Movie
+          linkName = "/The Fall Guy"
            name = "The Fall Guy"
            image="images/FGimg.jfif"
            cast= "Cast: Ryan Gosling, Emily Blunt"
@@ -25,6 +27,7 @@ function Genre () {
           />
 
           <Movie
+          linkName = "/Flight Risk"
           name="Flight Risk"
         image="images/FR.jfif"
         cast= "Cast: Mark Wahlberg, Michelle Dockery"
@@ -37,6 +40,7 @@ function Genre () {
         <h1>Comedy: </h1>
         <div className="comedyImg">
         <Movie
+        linkName = "/Free Guy"
        name ="Free Guy"
         image="images/FreeG.jfif"
         cast= "Cast: Ryan Reynolds, Jodie Comer"
@@ -44,6 +48,7 @@ function Genre () {
         rating= "Rating: 7.1/10 IMDb"   />
 
           <Movie
+          linkName="/White Chicks"
          name="White Chicks"
         image="images/WC.jfif"
         cast= "Cast: Shawn Wayans, Marlon Wayans"
@@ -51,6 +56,7 @@ function Genre () {
         rating= "Rating: 5.8/10 IMDb"  /> 
         
           <Movie
+           linkName="/Fly me to the moon"
            name="Fly me to the moon"
            image="images/flmm.jfif"
            cast= "Cast: Channing Tatum, Scarlett Johanessen"
@@ -63,12 +69,14 @@ function Genre () {
 <div className="romanceImg">
 <Movie
 name="La La Land"
+linkName="/La La Land"
         image="images/LLL.jfif"
         cast = "Cast: Ryan Gosling, Emma Stone"
         year = "Year: 2016"
          rating = "Rating: 8/10 IMDb"/>
 
           <Movie
+          linkName="/The Idea of You"
             name="The Idea of You"
             image ="images/idea.jfif"
             cast = "Cast: Anne Hathaway, Nicholas Galitzine"
@@ -76,6 +84,7 @@ name="La La Land"
             rating = "Rating: 6.3/10 IMDb"/> 
 
           <Movie
+          linkName="/Anyone But You"
            name="Anyone But You"
            image="images/anyone.jfif"
            cast= "Cast: Sydney Sweeney, Glen Powell"
