@@ -1,11 +1,13 @@
 import "./css/movie.css";
-import {Outlet, Link} from "react-router-dom";
 
 function Movie(props) {
+
     return (
-        <section className="movie">
-            <Link to={props.linkName}><h3>{props.name}</h3></Link>     
+        <section className="movie"  onClick={props.onClick} 
+        style={{ cursor: props.onClick ? 'pointer' : 'default' }}>
+            <h3>{props.name}</h3>    
             <img src={props.image} />
+            <p>{props.genre}</p>
             <p>{props.cast}</p>
             <p>{props.year}</p>
             <p>{props.rating}</p>

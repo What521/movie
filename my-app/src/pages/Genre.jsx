@@ -1,97 +1,63 @@
 import './css/Genre.css';
 import Movie from '../components/movie.jsx';
+import React, {useState, useEffect} from "react";
+import axios from "axios";
+import Pop from '../components/pop.jsx';
 
 function Genre () {
+
+  const [props, setProps] = useState([]); 
+  
+     useEffect (() => {
+      (async () => {
+        const response = await axios.get(
+          "https://movie-server-t54e.onrender.com/api/movies"
+        );
+       setProps(response.data);
+      })();
+     },[]);
+
+     const [selectedMovie, setSelectedMovie] = useState(null);
+
+     const handleMovieClick = (movie) => {
+       setSelectedMovie(movie);
+     };
+   
+     const closeModal = () => {
+       setSelectedMovie(null);
+     };
+
     return(
       <>
          <h1>Search movie by genre</h1>
                 <br/><br/>
-                <div className="MG">
-        <h1>Action:</h1>
-        <div className="actionImg">
-          <Movie
-          linkName = "/John Wick"
-          name = "John Wick"
-        image ="images/JWimg.jfif"
-        cast = "Cast: Keanu Reeves, Adrianne Palicki"
-        year = "Year: 2014"
-        rating = "Rating: 7.4/10 IMDb"/>
-
-          <Movie
-          linkName = "/The Fall Guy"
-           name = "The Fall Guy"
-           image="images/FGimg.jfif"
-           cast= "Cast: Ryan Gosling, Emily Blunt"
-           year= "Year: 2024"
-           rating= "Rating: 6.8/10 IMDb"  
-          />
-
-          <Movie
-          linkName = "/Flight Risk"
-          name="Flight Risk"
-        image="images/FR.jfif"
-        cast= "Cast: Mark Wahlberg, Michelle Dockery"
-        year= "Year: 2025"
-        rating= "Rating: 5.3/10 IMDb"  />       
-
-        </div>
-        <br/><br/>
-
-        <h1>Comedy: </h1>
-        <div className="comedyImg">
-        <Movie
-        linkName = "/Free Guy"
-       name ="Free Guy"
-        image="images/FreeG.jfif"
-        cast= "Cast: Ryan Reynolds, Jodie Comer"
-        year= "Year: 2021"
-        rating= "Rating: 7.1/10 IMDb"   />
-
-          <Movie
-          linkName="/White Chicks"
-         name="White Chicks"
-        image="images/WC.jfif"
-        cast= "Cast: Shawn Wayans, Marlon Wayans"
-        year="Year: 2004"
-        rating= "Rating: 5.8/10 IMDb"  /> 
+        
+        <div id="genres">
+        {props.map((prop) => (
         
           <Movie
-           linkName="/Fly me to the moon"
-           name="Fly me to the moon"
-           image="images/flmm.jfif"
-           cast= "Cast: Channing Tatum, Scarlett Johanessen"
-           year= "Year: 2024"
-           rating= "Rating: 6.6/10 IMDb"  /> 
+          key={prop.be_id}
+          onClick={() => handleMovieClick(prop)}
+          genre={prop.Genre}
+          name={prop.title}
+          image={prop.image1}
+          cast={prop.cast}
+          year={prop.year}
+          rating={prop.rating}
+          />
+        ))}
         </div>
-<br/><br/>
 
-<h1>Romance:</h1>
-<div className="romanceImg">
-<Movie
-name="La La Land"
-linkName="/La La Land"
-        image="images/LLL.jfif"
-        cast = "Cast: Ryan Gosling, Emma Stone"
-        year = "Year: 2016"
-         rating = "Rating: 8/10 IMDb"/>
-
-          <Movie
-          linkName="/The Idea of You"
-            name="The Idea of You"
-            image ="images/idea.jfif"
-            cast = "Cast: Anne Hathaway, Nicholas Galitzine"
-            year = "Year: 2024"
-            rating = "Rating: 6.3/10 IMDb"/> 
-
-          <Movie
-          linkName="/Anyone But You"
-           name="Anyone But You"
-           image="images/anyone.jfif"
-           cast= "Cast: Sydney Sweeney, Glen Powell"
-           year= "Year: 2023"
-           rating= "Rating: 6.1/10 IMDb"/>   
-</div>
-                </div>
+{selectedMovie && (
+        <Pop
+          className="opening"
+          onClose={closeModal}
+          name={selectedMovie.title}
+          desc={selectedMovie.desc}
+          image1={`${process.env.PUBLIC_URL}/${selectedMovie.image1}`} 
+          image2={`${process.env.PUBLIC_URL}/${selectedMovie.image2}`}
+        />
+      )} 
       </>
     );
 };

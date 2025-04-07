@@ -1,3 +1,10 @@
+.opening{
+    display: block;
+}
+
+.closing{
+    display: none;
+}
 
 body{
     background: orangered;

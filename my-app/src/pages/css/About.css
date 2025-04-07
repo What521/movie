@@ -15,30 +15,3 @@ h2{
     background: black;
     padding: 10px;
 }
-
-body p{
-    font-size: 15px;
-}
-
-.images
-{
-    text-align: center;
-}
-
-.images img 
-{
-    padding : 14px;
-}
-
-@media only screen and (min-width: 1200px)
-{
-
-    .images
-    {
-        display: flex;
-    }
-
-    .images img{
-        flex:1;
-    }
-}

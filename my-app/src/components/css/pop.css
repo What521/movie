@@ -1,0 +1,58 @@
+#modal img{
+    height: 150px;
+    width: 200px;
+}
+
+#modal p{
+    font-size: 35px;
+}
+
+#close{
+    padding-left: 100px;
+}
+
+#modal{
+    background: red;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    box-shadow: 5px 5px black;
+    position: absolute;
+    left: 20%;
+    top: 190%;
+}
+
+.closing {
+    display: none;
+  }
+  
+  .opening {
+    display: block;
+  }
+
+@media only screen and (min-width: 1200px)
+{
+
+    #close{
+        margin-left: 300px;
+    }
+
+    .images{
+        display: flex;
+    }
+
+    .images img{
+        flex:1;
+    }
+
+    #modal{
+        background: red;
+        text-align: center;
+        width: 450px;
+        height: auto;
+        box-shadow: 5px 5px black;
+        position: absolute;
+        left: 35%;
+         top: 140%;
+    }
+}

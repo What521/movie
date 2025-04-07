@@ -3,7 +3,6 @@
     padding: 10px;
     text-align: center;
 }
-
 .main-nav a{
     text-decoration: none;
     color: blanchedalmond;
@@ -13,8 +12,25 @@
     color: crimson;
 }
 
-@media only screen and (min-width: 900px) {
-    .main-nav ul {
+.main-nav .hide-small{
+    display: none;
+}
+
+.main-nav{
+    text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .main-nav ul{
+        display: flex;
+    }
+
+    .main-nav button {
+        display:none;
+    }
+
+    .main-nav .hide-small {
         display:flex;
     }
 }

@@ -44,6 +44,11 @@ footer h2, footer h5{
     font-size: 20px;
 }
 
+span{
+    color: green;
+    margin-left: 100px;
+}
+
 @media only screen and (min-width: 1200px)
 {
 
@@ -75,6 +80,10 @@ footer h2, footer h5{
     .con-info h5
     {
         flex: 1;
+        margin-left: 40px;
     }
-   
+    
+    span{
+        margin-left: 550px;
+    }
 }
