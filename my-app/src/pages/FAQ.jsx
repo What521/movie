@@ -5,7 +5,7 @@ import LOI from '../components/ListOfImages';
 function FAQ() {
     return (
         <>
-               <h2>FAQ</h2>
+               <h5>FAQ</h5>
                 <br/>
                 <QA
                 q="How do I sign up and purchase subscription for mayback movies?" 

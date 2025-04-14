@@ -29,7 +29,7 @@ function App() {
   return (
     <>
 
-<h2>Home</h2>
+<h5>Home</h5>
 
 <h3>Top Recommended movies:</h3>
 

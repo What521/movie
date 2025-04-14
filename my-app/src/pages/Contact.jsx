@@ -34,7 +34,7 @@ function Contact (){
     return(
       <>
           <main>
-            <h2>Contact Us</h2>
+            <h5>Contact Us</h5>
                 <h4>Have any questions or concerns? Feel free to reach out!</h4>
 
 <form onSubmit={onSubmit}>

@@ -5,7 +5,7 @@ function Header() {
     return(
         <header>
             <img src={`${process.env.PUBLIC_URL}/images/LogoM.jfif`}/>
-            <h1>Mayback movies</h1>
+            <h4>Mayback movies</h4>
             <Navigation />
         </header>
     );

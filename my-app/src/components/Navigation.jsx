@@ -10,7 +10,11 @@ function Navigation() {
     }
     return (
         <nav className="main-nav">
-             <button onClick={toggleMenu}>Open/Close</button>
+            <div id="toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            <div></div>
+            <div></div>
+            <div></div>
+            </div>
             <ul className={menuOpen?"":"hide-small"}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>

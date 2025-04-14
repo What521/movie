@@ -5,7 +5,7 @@ import LOI from '../components/ListOfImages';
 function About() {
     return (
         <>
-                <h2>About Us</h2>
+                <h5>About Us</h5>
                 <p>
                     At Mayback Movies, we believe movies should be accessible anytime, anywhere. Our platform offers a vast library of blockbuster hits, indie favorites, and binge-worthy series for every type of viewer. Founded with the mission of bringing cinematic experiences to your fingertips, Mayback Movies provides high-quality streaming with personalized recommendations tailored just for you. Whether you’re into action-packed thrillers, heartwarming rom-coms, or sci-fi thrillers, we’ve got it all.
 
@@ -23,7 +23,7 @@ function About() {
                 image3="images/Js.jfif"/>
                 </div> 
             
-                <h2>Some of our popular reviews: </h2>
+                <h1>Some of our popular reviews: </h1>
                 <Reviews
                 person="Ariana Gregory, 23, Graduate Student at UCLA:"
 review="As a film studies grad student, I’m always on the hunt for platforms that go beyond the usual mainstream picks. Mayback Movies delivers exactly that. Their catalog is a film lover’s dream—from indie darlings and foreign masterpieces to deep-cut classics that are impossible to find elsewhere.
