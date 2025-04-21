@@ -1,7 +1,9 @@
 .movie{
     border: solid black;
+    border-radius: 10px;
     margin: 5px;
     text-align: center;
+    background: gold;
 }
 
 @media only  screen and (min-width:900px)

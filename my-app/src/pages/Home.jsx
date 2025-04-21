@@ -39,20 +39,20 @@ function App() {
 <Movie 
         onClick={toggleModalRN}
         name = "Red Notice"
-        image ={`${process.env.PUBLIC_URL}/images/RN.jfif`}
+        image1 = {`${process.env.PUBLIC_URL}images/RN.jfif`}
         cast = "Dwayne Johnson, Ryan Reynolds"
-        year = "Year: 2021"
-        rating = "Rating: 6.3/10 IMDb"
+        year = "2021"
+        rating = "6.3/10 IMDb"
         />
 
 
           <Movie
            onClick={toggleModalPB}
            name = "Puss in the boots"
-           image={`${process.env.PUBLIC_URL}/images/PB.jfif`}
-           cast= "Cast: Antonio Banderas, Salma Hayek"
-           year= "Year: 2011"
-           rating= "Rating: 6.6/10 IMDb"  
+           image1 ={`${process.env.PUBLIC_URL}/images/PB.jfif`}
+           cast= "Antonio Banderas, Salma Hayek"
+           year= "2011"
+           rating= "6.6/10 IMDb"  
           />
 </ul>
 
@@ -61,18 +61,18 @@ function App() {
     <Movie
        onClick={toggleModalKW}
           name = "A Knight's War"
-        image ={`${process.env.PUBLIC_URL}/images/KW2.jfif`}
-        cast = "Cast: Jeremy Ninaber, Kristen Kasteri"
-        year = "Year: 2025"
-        rating = "Rating: 7.1/10 IMDb"/>
+        image1 ={`${process.env.PUBLIC_URL}/images/KW2.jfif`}
+        cast = "Jeremy Ninaber, Kristen Kasteri"
+        year = "2025"
+        rating = "7.1/10 IMDb"/>
 
           <Movie
            onClick={toggleModalDN}
            name = "Dark Nuns"
-           image={`${process.env.PUBLIC_URL}/images/DN.jfif`}
-           cast= "Cast: Moon Woo-jin, Lee Jin-wook"
-           year= "Year: 2025"
-           rating= "Rating: 5.8/10 IMDb"  
+           image1={`${process.env.PUBLIC_URL}/images/DN.jfif`}
+           cast= "Moon Woo-jin, Lee Jin-wook"
+           year= "2025"
+           rating= "5.8/10 IMDb"  
           />
     </ul>
 

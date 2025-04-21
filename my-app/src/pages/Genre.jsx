@@ -66,13 +66,12 @@ function Genre () {
 
         <div id="genres">
         {props.map((prop) => (
-        
           <Movie
           key={prop.be_id}
           onClick={() => handleMovieClick(prop)}
           genre={prop.Genre}
           name={prop.title}
-          image={prop.image1}
+          image1={prop.image1}
           cast={prop.cast}
           year={prop.year}
           rating={prop.rating}
@@ -90,7 +89,7 @@ function Genre () {
           image2={`${process.env.PUBLIC_URL}/${selectedMovie.image2}`}
         />
       )} 
-      </>
+    </>
     );
 };
 

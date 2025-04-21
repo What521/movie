@@ -1,17 +1,100 @@
 import "./css/movie.css";
+import React, {useState, useEffect} from "react";
+import EditMovie from "../components/EditMovie.jsx";
+import DeleteMovie from "../components/DeleteMovie.jsx";
 
 function Movie(props) {
 
+    const [movieDesc, setMovieDesc] = useState(props);
+    const [showEditDialog, setShowEditDialog] = useState(false);
+    const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+    const [showMovieDesc, setShowMovieDesc] = useState(true);
+    
+    const openEditDialog = () => {
+        setShowEditDialog(true);
+      };
+    
+      const closeEditDialog = () => {
+        setShowEditDialog(false);
+      };
+    
+      const openDeleteDialog = () => {
+        setShowDeleteDialog(true);
+      };
+    
+      const closeDeleteDialog = () => {
+        setShowDeleteDialog(false);
+      };
+    
+      const hideMovieDesc = () => {
+        setShowMovieDesc(false);
+      };
+    
+      const editMovieDesc = (movie) => {
+        setMovieDesc(movie);
+      };
+
     return (
+        <>
         <section className="movie"  onClick={props.onClick} 
         style={{ cursor: props.onClick ? 'pointer' : 'default' }}>
-            <h3>{props.name}</h3>    
-            <img src={props.image} />
-            <p>{props.genre}</p>
-            <p>{props.cast}</p>
-            <p>{props.year}</p>
-            <p>{props.rating}</p>
-        </section>
+        {showMovieDesc?(
+        <div>
+            {showDeleteDialog?(
+              <DeleteMovie
+              title={props.name}
+              be_id={props.be_id}
+              closeDeleteDialog = {closeDeleteDialog}
+              hideMovieDesc = {hideMovieDesc}
+            />
+            ):("")}
+
+            {showEditDialog?(
+               <EditMovie
+               be_id={props.be_id}
+               title={props.name}
+               Genre={props.genre}
+               image1={props.image1}
+               cast={props.cast}
+               year={props.year}
+               rating={props.rating}
+               closeEditDialog = {closeEditDialog}
+               editMovieDesc = {editMovieDesc}
+             />
+            ):("")}
+           
+
+          <section className="movieDesc columns">
+    
+            <section className="info">
+              <header className="columns">
+                <h3>{props.name}</h3>
+                <section id="change-buttons">
+                  <a href="#" onClick={openEditDialog} >
+                    &#9998;
+                  </a>
+                  <a href="#" onClick={openDeleteDialog}>
+                    &#x2715;
+                  </a>
+                </section>
+              </header>
+              <section className="feature-image">
+              <img
+                src={"https://movie-server-t54e.onrender.com/" + props.image1}
+                alt={movieDesc.name}
+              />
+            </section>
+              
+              <p>Genre: {props.genre}</p>
+              <p> Cast: {props.cast}</p>
+              <p> Year: {props.year}</p>
+              <p> Rating: {props.rating}</p>
+            </section>
+          </section>
+        </div>
+      ):("")}
+      </section>
+        </>
     );
 }
 

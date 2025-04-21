@@ -1,4 +1,5 @@
 import "./css/AddMovie.css";
+import "./css/Modal.css";
 import React, {useState} from "react";
 
 const AddMovie = (props) => {

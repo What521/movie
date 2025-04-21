@@ -3,6 +3,7 @@ import "./css/pop.css";
 function Pop (props){
 
     return(
+      <>
       <section id="modal" className={props.className}>
         <span id="close" onClick={props.onClose}>&#10006;</span>
             <h3>{props.name}</h3>
@@ -12,6 +13,7 @@ function Pop (props){
              <img src={props.image2}/>
             </section>
       </section>
+      </>
     );
 };
 
