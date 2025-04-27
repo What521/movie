@@ -20,7 +20,7 @@ function Navigation() {
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/faq">FAQ</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
-                <li><Link to="/genre">Search by genre</Link></li>
+                <li><Link to="/genre">Add Movie</Link></li>
             </ul>
         </nav>
     );

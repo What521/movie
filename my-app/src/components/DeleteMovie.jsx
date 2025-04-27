@@ -7,14 +7,14 @@ const DeleteMovie = (props) => {
   const [result, setResult] = useState("");
 
   const deleteMovie = async() => {
-    const response = await fetch(`https://movie-server-t54e.onrender.com/api/movies${props.be_id}`,{
+    const response = await fetch(`https://movie-server-t54e.onrender.com/api/movies/${props._id}`,{
       method:"DELETE"
     });
 
     if(response.status === 200){
       setResult("Movie deleted successfully");
       props.closeDeleteDialog();
-      props.hideMovie();
+      props.hideMovieDesc();
     } else {
       setResult("error deleting the movie");
     }

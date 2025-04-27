@@ -54,7 +54,7 @@ function Genre () {
 
     return(
       <>
-         <h5>Search movie by genre</h5>
+         <h5>Add a movie description</h5>
                 <br/><br/>
         
                 <button id="add-movie" onClick={openAddDialog}>+</button>
@@ -67,28 +67,16 @@ function Genre () {
         <div id="genres">
         {props.map((prop) => (
           <Movie
-          key={prop.be_id}
+          key={prop._id}
+          _id={prop._id}
           onClick={() => handleMovieClick(prop)}
-          genre={prop.Genre}
           name={prop.title}
-          image1={prop.image1}
           cast={prop.cast}
           year={prop.year}
           rating={prop.rating}
           />
         ))}
         </div>
-
-{selectedMovie && (
-        <Pop
-          className="opening"
-          onClose={closeModal}
-          name={selectedMovie.title}
-          desc={selectedMovie.desc}
-          image1={`${process.env.PUBLIC_URL}/${selectedMovie.image1}`} 
-          image2={`${process.env.PUBLIC_URL}/${selectedMovie.image2}`}
-        />
-      )} 
     </>
     );
 };

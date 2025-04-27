@@ -43,7 +43,7 @@ function Movie(props) {
             {showDeleteDialog?(
               <DeleteMovie
               title={props.name}
-              be_id={props.be_id}
+              _id={props._id}
               closeDeleteDialog = {closeDeleteDialog}
               hideMovieDesc = {hideMovieDesc}
             />
@@ -51,10 +51,8 @@ function Movie(props) {
 
             {showEditDialog?(
                <EditMovie
-               be_id={props.be_id}
+               _id={props._id}
                title={props.name}
-               Genre={props.genre}
-               image1={props.image1}
                cast={props.cast}
                year={props.year}
                rating={props.rating}
@@ -78,14 +76,7 @@ function Movie(props) {
                   </a>
                 </section>
               </header>
-              <section className="feature-image">
-              <img
-                src={"https://movie-server-t54e.onrender.com/" + props.image1}
-                alt={movieDesc.name}
-              />
-            </section>
-              
-              <p>Genre: {props.genre}</p>
+            
               <p> Cast: {props.cast}</p>
               <p> Year: {props.year}</p>
               <p> Rating: {props.rating}</p>

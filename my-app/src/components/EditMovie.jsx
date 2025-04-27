@@ -10,14 +10,14 @@ const EditMovie = (props) => {
     setPrevSrc(URL.createObjectURL(event.target.files[0]));
 };
 
-  const onSubmit = async(event) => {
+  const onSubmit = async(event) => { 
     event.preventDefault();
     setResult("Sending...");
 
     const formData = new FormData(event.target);
     console.log(...formData);
 
-    const response = await fetch(`https://movie-server-t54e.onrender.com/api/movies${props.be_id}`,{
+    const response = await fetch(`https://movie-server-t54e.onrender.com/api/movies/${props._id}`,{
       method:"PUT",
       body:formData
     });
@@ -26,7 +26,7 @@ const EditMovie = (props) => {
       setResult("Movie editted successfully!");
       event.target.reset();
       props.closeEditDialog();
-      props.editMovie(await response.json());
+      props.editMovieDesc(await response.json());
     }
     else {
       setResult("can't edit movie");
@@ -52,17 +52,6 @@ const EditMovie = (props) => {
                 id="title"
                 name="title"
                 defaultValue={props.title}
-                required
-              />
-            </p>
-
-            <p>
-              <label htmlFor="Genre">Genre:</label>
-              <input
-                type="text"
-                id="Genre"
-                name="Genre"
-                defaultValue={props.Genre}
                 required
               />
             </p>
@@ -99,20 +88,6 @@ const EditMovie = (props) => {
               />
             </p>
 
-            <section className="columns">
-                    <div>
-                        <p id="img-prev-section">
-                            {prevSrc!=""?
-                            (<img id="img-prev" src={prevSrc}></img>):
-                            ("")
-                            }
-                        </p>
-                    </div>
-                    <p id="img-upload">
-                        <label htmlFor="img">Upload Image:</label>
-                        <input type="file" id="img" name="img" accept="image/*" onChange={uploadImage} />
-                    </p>
-                </section>
             <p>
               <button type="submit">Submit</button>
             </p>

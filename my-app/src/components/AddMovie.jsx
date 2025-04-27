@@ -38,21 +38,11 @@ const AddMovie = (props) => {
                 <div className="w3-container">
                     <span id="dialog-close" className="w3-button w3-display-topright" onClick={props.closeAddDialog}>&times;</span>
                     <form id="add-property-form" onSubmit={addToServer}>
-                        <h3>Create New Property</h3>
+                        <h3>Create New Movie</h3>
 
                         <p>
-                            <label htmlFor="name">Movie Name:</label>
-                            <input type="text" id="name" name="title" required min="3"></input>
-                        </p>
-
-                        <p id="img-upload">
-                                <label htmlFor="img">Upload Image:</label>
-                                <input type="file" id="img" name="image1" accept="image/*" onChange={uploadImage} />
-                        </p>
-
-                        <p>
-                            <label htmlFor="genre">Genre:</label>
-                            <input type="text" id="genre" name="genre" required></input>
+                            <label htmlFor="title">Movie Name:</label>
+                            <input type="text" id="name" name="title" required></input>
                         </p>
 
                         <p>
@@ -69,18 +59,7 @@ const AddMovie = (props) => {
                             <label htmlFor="rating">Rating:</label>
                             <input type="text" id="rating" name="rating" required></input>
                         </p>
-
-                        <section className="columns">
-                            <div>
-                                <p id="img-prev-section">
-                                    {prevSrc!=""?
-                                    (<img id="img-prev" src={prevSrc}></img>):
-                                    ("")
-                                    }
-                                </p>
-                            </div>
-                        </section>
-
+                         
                         <p>
                             <button type="submit">Submit</button>
                         </p>
